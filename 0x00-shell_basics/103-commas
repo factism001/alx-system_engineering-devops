@@ -1,2 +1,2 @@
 #!/bin/bash
-ls . .. -almpu [:digit:] [:alpha:]
+ls -xamp
