@@ -1,2 +1,2 @@
 #!/bin/bash
-file -m School0:SCHOOL
+file -m 0 string SCHOOL school
