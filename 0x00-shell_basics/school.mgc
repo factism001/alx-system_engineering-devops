@@ -1,2 +1,2 @@
 #!/bin/bash
-file -m[:upper:] School
+file -m School0:SCHOOL
