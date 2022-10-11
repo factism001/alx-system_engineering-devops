@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | tr -d "oo" | egrep
+echo {a..z}{a..z} | tr -d "oo" | grep -e "oo"
