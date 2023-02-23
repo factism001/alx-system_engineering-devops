@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# using IFS for read the etc/passwd file and create a history
+input="/etc/passwd"
+# IFS= comand_flag_name
+while IFS= read -r line
+do
+    aux=$line
+    name=$( echo "$aux" |cut -d: -f1 )
+    pass=$( echo "$aux" |cut -d: -f2 )
+    id=$( echo "$aux" |cut -d: -f3 )
+    group=$( echo "$aux" |cut -d: -f4 )
+    info=$( echo "$aux" |cut -d: -f5 )
+    home=$( echo "$aux" |cut -d: -f6 )
+    shell=$( echo "$line" |cut -d: -f7 )
+    echo -n "The user "
+    echo -n "$name"
+    echo -n " is part of the "
+    echo -n "$group"
+    echo -n " gang, lives in "
+    echo -n "$home"
+    echo -n " and rides "
+    echo -n "$shell"
+    echo -n ". "
+    echo -n "$id"
+    echo -n "'s place is protected by the passcode "
+    echo -n "$pass"
+    echo -n ", more info about the user here: "
+    echo "$info"
+done < "$input"

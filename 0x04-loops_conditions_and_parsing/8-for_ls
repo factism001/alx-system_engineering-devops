@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# print only the name without numbers
+LIST="$( ls .)"
+for i in $LIST
+do echo "$i"|cut -d- -f2
+done
