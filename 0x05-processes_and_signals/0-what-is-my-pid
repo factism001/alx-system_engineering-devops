@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# print the PID using $ variable
+echo $$

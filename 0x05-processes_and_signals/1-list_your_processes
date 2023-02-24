@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#print current PID's in a useroriented format
+ps auxf

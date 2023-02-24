@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#print all commands with bash
+# shellcheck disable=SC2009
+ps auxf | grep bash

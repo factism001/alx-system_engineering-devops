@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Creates a file with its PID, display messages
+#+ deletes file and exit
+# 15 = SIGTERM, 2 = SIGINT, 3 = SIGQUIT
+echo "$$" > /var/run/myscript.pid
+trap "echo Y U no love me?!" 2
+trap "echo I hate the kill command; rm /var/run/myscript.pid; exit" 15
+trap "rm /var/run/myscript.pid; exit" 3
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
