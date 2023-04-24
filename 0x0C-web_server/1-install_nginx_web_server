@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script that configures a new Ubuntu machine to respect above requirements
+
+apt-get update
+apt-get install -y nginx
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+service nginx restart
